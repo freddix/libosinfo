@@ -1,11 +1,11 @@
 Summary:	A library for managing OS information for virtualization
 Name:		libosinfo
-Version:	0.2.8
+Version:	0.2.9
 Release:	1
 License:	LGPL v2+
 Group:		Libraries
 Source0:	https://fedorahosted.org/releases/l/i/libosinfo/%{name}-%{version}.tar.gz
-# Source0-md5:	497111d96815ff27e0da662bc3cc4b69
+# Source0-md5:	806f1175108b6e2398c03b6f5da8c2e0
 Patch0:		%{name}-destdir.patch
 URL:		https://fedorahosted.org/libosinfo/
 BuildRequires:	autoconf
