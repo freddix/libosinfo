@@ -1,11 +1,11 @@
 Summary:	A library for managing OS information for virtualization
 Name:		libosinfo
-Version:	0.2.10
+Version:	0.2.11
 Release:	1
 License:	LGPL v2+
 Group:		Libraries
 Source0:	https://fedorahosted.org/releases/l/i/libosinfo/%{name}-%{version}.tar.gz
-# Source0-md5:	02708aec32212c8b153d11b23e35c4e0
+# Source0-md5:	acfcddc6a3f577524fd705947fb5abbc
 Patch0:		%{name}-destdir.patch
 URL:		https://fedorahosted.org/libosinfo/
 BuildRequires:	autoconf
@@ -74,6 +74,8 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT \
 	UDEV_RULESDIR="%{_prefix}/lib/udev/rules.d"
+
+%{__rm} $RPM_BUILD_ROOT%{_libdir}/*.la
 
 %clean
 rm -rf $RPM_BUILD_ROOT
